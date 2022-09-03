@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="parent" default="map"/>
+  <include file="$(find iri_sign_description)/launch/spawn_semaphore.launch">
+    <arg name="name"  value="semaphore1"/>
+    <arg name="initial_state"  value="false"/>
+    <arg name="x"  value="7.85"/>
+    <arg name="y"  value="6.20"/>
+    <arg name="yaw"  value="-1.55"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+  
+  <include file="$(find iri_sign_description)/launch/spawn_semaphore.launch">
+    <arg name="name"  value="semaphore2"/>
+    <arg name="initial_state"  value="true"/>
+    <arg name="x"  value="-0.63"/>
+    <arg name="y"  value="-0.5"/>
+    <arg name="yaw"  value="3.14159"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+
+  <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="stop"/>
+    <arg name="type"  value="stop"/>
+    <arg name="x"  value="7.85"/>
+    <arg name="y"  value="2.10"/>
+    <arg name="yaw"  value="-1.55"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+  
+  <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="pedestrian_crossing"/>
+    <arg name="type"  value="pedestrian_crossing"/>
+    <arg name="x"  value="1.6"/>
+    <arg name="y"  value="-0.5"/>
+    <arg name="yaw"  value="3.14159"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+
+  <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="parking"/>
+    <arg name="type"  value="parking"/>
+    <arg name="x"  value="4.5"/>
+    <arg name="y"  value="0.53"/>
+    <arg name="yaw"  value="3.14159"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>  
+
+  <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="roadworks"/>
+    <arg name="type"  value="roadworks"/>
+    <arg name="x"  value="0.3"/>
+    <arg name="y"  value="0.53"/>
+    <arg name="yaw"  value="3.14159"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+
+  <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="no_overtaking"/>
+    <arg name="type"  value="no_overtaking"/>
+    <arg name="x"  value="6.2"/>
+    <arg name="y"  value="-0.5"/>
+    <arg name="yaw"  value="3.14159"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+
+   <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="end_prohibitions"/>
+    <arg name="type"  value="end_prohibitions"/>
+    <arg name="x"  value="6.85"/>
+    <arg name="y"  value="3.7"/>
+    <arg name="yaw"  value="-1.55"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+
+  <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="no_entry"/>
+    <arg name="type"  value="no_entry"/>
+    <arg name="x"  value="7.7"/>
+    <arg name="y"  value="0.36"/>
+    <arg name="yaw"  value="-2.66"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+
+  <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="prohibited_left"/>
+    <arg name="type"  value="prohibited_left"/>
+    <arg name="x"  value="3.27"/>
+    <arg name="y"  value="-0.5"/>
+    <arg name="yaw"  value="3.14159"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+
+  <include file="$(find iri_sign_description)/launch/spawn_sign.launch">
+    <arg name="name"  value="prohibited_right"/>
+    <arg name="type"  value="prohibited_right"/>
+    <arg name="x"  value="7.85"/>
+    <arg name="y"  value="5.10"/>
+    <arg name="yaw"  value="-1.55"/>
+    <arg name="parent"  value="$(arg parent)"/>
+  </include>
+</launch>
